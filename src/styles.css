@@ -1,0 +1,106 @@
+:root {
+  --bg: #f6f8fb;
+  --card: #fff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+}
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+}
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+}
+.app {
+  max-width: 980px;
+  margin: 28px auto;
+  padding: 20px;
+}
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+.subtitle {
+  margin: 6px 0 18px;
+  color: var(--muted);
+}
+.searchRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.searchRow input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+.searchRow button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+.status {
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.status.error {
+  color: #b91c1c;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+.card {
+  display: block;
+  background: var(--card);
+  padding: 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 4px rgba(2, 6, 23, 0.06);
+}
+.card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.meta {
+  padding-top: 8px;
+}
+.meta h3 {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.25;
+}
+.authors {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+.year {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 6px;
+}
+footer {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 12px;
+}
+@media (max-width: 520px) {
+  .card img {
+    height: 200px;
+  }
+}
